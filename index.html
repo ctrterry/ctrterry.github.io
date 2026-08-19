@@ -2,26 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tianren Chen — Software Developer and AI/ML Engineer. MCS at UC Irvine. Building practical software and intelligent systems." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Tianren Chen — Software Engineer. MCS at UC Irvine. Building systems and full-stack software." />
   <meta name="keywords" content="Tianren Chen, Computer Science, UC Irvine, Software Engineering, AI, Machine Learning, Portfolio" />
   <meta name="author" content="Tianren Chen" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="Tianren Chen — Software & AI Engineer" />
-  <meta property="og:description" content="MCS at UC Irvine. Building practical software and intelligent systems with machine learning, computer vision, and backend engineering." />
+  <meta property="og:title" content="Tianren Chen — Software Engineer" />
+  <meta property="og:description" content="MCS at UC Irvine. Concurrent systems, databases, and full-stack software." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ctrterry.github.io/portfolio/" />
-  <meta property="og:image" content="https://ctrterry.github.io/portfolio/assets/img/self_transparent.png" />
+  <meta property="og:image" content="https://ctrterry.github.io/portfolio/assets/img/og.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tianren Chen — Software & AI Engineer" />
-  <meta name="twitter:description" content="MCS at UC Irvine. Building practical software and intelligent systems." />
-  <meta name="twitter:image" content="https://ctrterry.github.io/portfolio/assets/img/self_transparent.png" />
+  <meta name="twitter:title" content="Tianren Chen — Software Engineer" />
+  <meta name="twitter:description" content="MCS at UC Irvine. Concurrent systems, databases, and full-stack software." />
+  <meta name="twitter:image" content="https://ctrterry.github.io/portfolio/assets/img/og.jpg" />
 
-  <title>Tianren Chen — Software & AI Engineer</title>
+  <title>Tianren Chen — Software Engineer</title>
   <link rel="canonical" href="https://ctrterry.github.io/portfolio/" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tianren Chen",
+      "url": "https://ctrterry.github.io/portfolio/",
+      "image": "https://ctrterry.github.io/portfolio/assets/img/og.jpg",
+      "jobTitle": "Software Engineer",
+      "email": "mailto:ctrterry@gmail.com",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of California, Irvine" },
+        { "@type": "CollegeOrUniversity", "name": "University of California, Davis" }
+      ],
+      "sameAs": [
+        "https://github.com/ctrterry",
+        "https://www.linkedin.com/in/ctrterry"
+      ]
+    }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,11 +60,12 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <div class="wrapper">
     <nav class="navbar">
       <a href="index.html" class="logo">T.Chen</a>
-      <div class="nav-right">
+      <div class="nav-right" id="primary-nav">
         <a href="index.html" class="active">Home</a>
         <a href="projects.html">Projects</a>
         <a href="resume.html">Resume</a>
@@ -62,7 +83,7 @@
             <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" />
           </svg>
         </button>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
           <span></span><span></span>
         </button>
       </div>
@@ -71,10 +92,10 @@
     <header class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-text reveal">
-        <p class="hero-role">Software Developer · AI/ML Engineer</p>
+        <p class="hero-role">Software Engineer</p>
         <h1>Tianren Chen</h1>
         <p class="hero-lead">
-          Building practical software and intelligent systems — MCS at
+          Building concurrent systems and full-stack software — MCS at
           <em>UC Irvine</em>, B.S. Computer Science from <em>UC Davis</em>.
         </p>
         <div class="hero-actions">
@@ -84,25 +105,25 @@
       </div>
       <div class="hero-visual reveal" data-delay="1">
         <div class="hero-frame">
-          <img src="assets/img/self_transparent.png" alt="Portrait of Tianren Chen" />
+          <img src="assets/img/self.webp" alt="Portrait of Tianren Chen" width="720" height="900" fetchpriority="high" />
         </div>
       </div>
     </header>
 
-    <section id="work" class="section work-section">
+    <section id="main" class="section work-section">
       <div class="section-inner">
         <div class="section-head reveal">
           <p class="eyebrow">Selected work</p>
           <h2>Projects that show how I build</h2>
-          <p class="section-sub">A few highlights across systems, full-stack web, and machine learning.</p>
+          <p class="section-sub">Concurrency, storage, and product software — the work I want to be hired for.</p>
         </div>
 
         <div class="work-list">
           <a href="projects.html#distributed-fs" class="work-item reveal">
             <span class="work-index">01</span>
             <div class="work-copy">
-              <h3>Distributed File System Project</h3>
-              <p>Multi-threaded C++ system with HTTP/REST handlers, thread pools, and transactional consistency.</p>
+              <h3>Multi-threaded Distributed File Service</h3>
+              <p>C++ file service with HTTP/REST handlers, a thread pool, and disk transactions for concurrent reads and writes.</p>
               <ul class="work-tags">
                 <li>C++</li>
                 <li>Concurrency</li>
@@ -112,29 +133,29 @@
             <span class="work-arrow" aria-hidden="true">→</span>
           </a>
 
-          <a href="projects.html#web-oauth-blog" class="work-item reveal" data-delay="1">
+          <a href="projects.html#lstore-db" class="work-item reveal" data-delay="1">
             <span class="work-index">02</span>
             <div class="work-copy">
-              <h3>Full-Stack Web Application</h3>
-              <p>Node.js blogging platform with Google OAuth, Express, SQLite, and custom API integrations.</p>
+              <h3>L-Store Concurrent Database</h3>
+              <p>In-memory store with base/tail pages, SQL-like CRUD, and a thread pool for mixed OLTP and OLAP traffic.</p>
               <ul class="work-tags">
-                <li>Node.js</li>
-                <li>OAuth</li>
-                <li>SQLite</li>
+                <li>Databases</li>
+                <li>Concurrency</li>
+                <li>C++</li>
               </ul>
             </div>
             <span class="work-arrow" aria-hidden="true">→</span>
           </a>
 
-          <a href="projects.html#machine-learning-course" class="work-item reveal" data-delay="2">
+          <a href="projects.html#web-oauth-blog" class="work-item reveal" data-delay="2">
             <span class="work-index">03</span>
             <div class="work-copy">
-              <h3>Machine Learning Coursework</h3>
-              <p>Core ML algorithms in Python — regression, classification, clustering, neural nets, and model evaluation.</p>
+              <h3>Blogging Platform with Google OAuth</h3>
+              <p>Node.js app with Passport.js login, Express APIs, SQLite storage, and CRUD for posts and profiles.</p>
               <ul class="work-tags">
-                <li>Python</li>
-                <li>scikit-learn</li>
-                <li>Neural Networks</li>
+                <li>Node.js</li>
+                <li>OAuth</li>
+                <li>SQLite</li>
               </ul>
             </div>
             <span class="work-arrow" aria-hidden="true">→</span>
@@ -151,17 +172,17 @@
       <div class="section-inner about-grid">
         <div class="section-head reveal">
           <p class="eyebrow">About</p>
-          <h2>Focused on intelligent systems that ship</h2>
+          <h2>Systems first, then intelligence</h2>
         </div>
         <div class="about-copy reveal" data-delay="1">
           <p>
-            I’m a software developer and AI/ML engineer interested in machine learning,
-            computer vision, backend systems, and data-driven products. I care about
-            turning research ideas into reliable, useful software.
+            I’m an MCS student at UC Irvine, with a B.S. in Computer Science from UC Davis.
+            The work I show here is mostly systems: concurrent file services, in-memory databases,
+            and networked programs that have to stay correct under load.
           </p>
           <p>
-            My work sits at the intersection of deep learning, NLP, and generative models —
-            with a systems background that keeps implementation grounded and scalable.
+            I also ship product-shaped software: authenticated web apps with real APIs and
+            persistent data. I care about code that other people can run, not just slides.
           </p>
         </div>
       </div>
@@ -170,86 +191,26 @@
     <section id="reading" class="section reading-section">
       <div class="section-inner">
         <div class="section-head reveal">
-          <p class="eyebrow">Reading list</p>
-          <h2>Papers shaping how I think about AI</h2>
-          <p class="section-sub">A curated set across foundations, language, and vision — not the full archive.</p>
+          <p class="eyebrow">Reading</p>
+          <h2>Papers I keep coming back to</h2>
+          <p class="section-sub">Foundations in language and vision — linked to arXiv, not a dump of PDFs.</p>
         </div>
 
-        <div class="papers-grid">
-          <div class="paper-group reveal">
-            <h3>Deep Learning</h3>
-            <ul class="paper-list">
-              <li>
-                <span>Optimization</span>
-                <a href="ai_Research_Paper/dl_background/DL_Optimization_DL.pdf" target="_blank" rel="noopener">Gradient Descent based Optimization Algorithms</a>
-              </li>
-              <li>
-                <span>Neural units</span>
-                <a href="ai_Research_Paper/dl_background/Brain_Nural_Unite_DL.pdf" target="_blank" rel="noopener">Basic Neural Units of the Brain</a>
-              </li>
-              <li>
-                <span>Cognition</span>
-                <a href="ai_Research_Paper/dl_background/Brain_Congnitive_Function_DL.pdf" target="_blank" rel="noopener">Cognitive Functions: Perception, Attention, Memory</a>
-              </li>
-              <li>
-                <span>ML overview</span>
-                <a href="ai_Research_Paper/dl_background/ML_Infor.pdf" target="_blank" rel="noopener">Machine Learning Fundamentals</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="paper-group reveal" data-delay="1">
-            <h3>Text & NLP</h3>
-            <ul class="paper-list">
-              <li>
-                <span>Transformer</span>
-                <a href="ai_Research_Paper/textMining_NLP/Transformer.pdf" target="_blank" rel="noopener">Attention Is All You Need</a>
-              </li>
-              <li>
-                <span>GPT-3</span>
-                <a href="ai_Research_Paper/textMining_NLP/GPT3_.pdf" target="_blank" rel="noopener">Language Models are Few-Shot Learners</a>
-              </li>
-              <li>
-                <span>Instruction tuning</span>
-                <a href="ai_Research_Paper/textMining_NLP/GPT_Instruct.pdf" target="_blank" rel="noopener">Training Language Models to Follow Instructions</a>
-              </li>
-              <li>
-                <span>Self-rewarding</span>
-                <a href="ai_Research_Paper/textMining_NLP/Self_Reward.pdf" target="_blank" rel="noopener">Self-Rewarding Language Models</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="paper-group reveal" data-delay="2">
-            <h3>Image & Vision</h3>
-            <ul class="paper-list">
-              <li>
-                <span>ViT</span>
-                <a href="ai_Research_Paper/image_versions/ViT.pdf" target="_blank" rel="noopener">An Image is Worth 16×16 Words</a>
-              </li>
-              <li>
-                <span>CLIP</span>
-                <a href="ai_Research_Paper/image_versions/CLIP.pdf" target="_blank" rel="noopener">Learning Transferable Visual Models</a>
-              </li>
-              <li>
-                <span>SAM</span>
-                <a href="ai_Research_Paper/image_versions/SAM.pdf" target="_blank" rel="noopener">Segment Anything</a>
-              </li>
-              <li>
-                <span>DDPM</span>
-                <a href="ai_Research_Paper/image_versions/DDPM.pdf" target="_blank" rel="noopener">Denoising Diffusion Probabilistic Models</a>
-              </li>
-              <li>
-                <span>LDM</span>
-                <a href="ai_Research_Paper/image_versions/LDM.pdf" target="_blank" rel="noopener">High-Resolution Image Synthesis with Latent Diffusion</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <ul class="reading-list reveal">
+          <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a></li>
+          <li><a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">GPT-3</a></li>
+          <li><a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener">InstructGPT</a></li>
+          <li><a href="https://arxiv.org/abs/2401.10020" target="_blank" rel="noopener">Self-Rewarding LMs</a></li>
+          <li><a href="https://arxiv.org/abs/2010.11929" target="_blank" rel="noopener">ViT</a></li>
+          <li><a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener">CLIP</a></li>
+          <li><a href="https://arxiv.org/abs/2304.02643" target="_blank" rel="noopener">SAM</a></li>
+          <li><a href="https://arxiv.org/abs/2006.11239" target="_blank" rel="noopener">DDPM</a></li>
+          <li><a href="https://arxiv.org/abs/2112.10752" target="_blank" rel="noopener">Latent Diffusion</a></li>
+        </ul>
 
         <div class="discussion reveal">
-          <h3>Discussion papers</h3>
-          <p>Reading-group trackers by year.</p>
+          <h3>Reading group</h3>
+          <p>Trackers by year, if you want the longer list.</p>
           <ul class="discussion-links">
             <li><a href="https://docs.google.com/spreadsheets/d/1cKKFg2zjILwHBISuJCIMwDJIK0FUtJIftuGG9lLRDSo/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener">2025</a></li>
             <li><a href="https://docs.google.com/spreadsheets/d/1YyNrls0FG1jVtHapDFglOy35CCJlYeoDeOvzx7QsefA/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener">2024</a></li>

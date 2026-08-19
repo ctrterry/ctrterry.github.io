@@ -35,18 +35,30 @@
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav-right");
 
+  const setMenuOpen = (open) => {
+    if (!toggle || !nav) return;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    nav.classList.toggle("is-open", open);
+  };
+
   if (toggle && nav) {
+    if (!nav.id) nav.id = "primary-nav";
+    toggle.setAttribute("aria-controls", nav.id);
+
     toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      nav.classList.toggle("is-open", !open);
+      setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        toggle.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-      });
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      if (toggle.getAttribute("aria-expanded") !== "true") return;
+      setMenuOpen(false);
+      toggle.focus();
     });
   }
 

@@ -1,37 +1,26 @@
-# Terry’s Educational Portfolio
+# Tianren Chen — Portfolio
 
-Welcome to my personal portfolio website!
-This site showcases my education, projects, and experiences in Computer Science and beyond.
+Personal site: [ctrterry.github.io/portfolio](https://ctrterry.github.io/portfolio/)
 
-## Table of Contents
+MCS Computer Science at UC Irvine. Previously B.S. Computer Science at UC Davis.
 
-1. [Introduction](#introduction)
-2. [Education](#education)
-3. [Projects](#projects)
-4. [Experience](#experience)
----
+## Pages
 
-## Introduction
+- `index.html` — intro, selected work, about, reading
+- `projects.html` — project write-ups
+- `resume.html` — web resume (`resumes/Tianren_Chen_Resume.pdf` to download)
+- `contact.html` — email, LinkedIn, GitHub, and a form
 
-This website is a place where I share my journey, including:
-- My academic background and research interests.
-- Personal and professional projects I’ve undertaken.
-- Links to my professional profiles and ways to contact me.
+## Local preview
 
-## Education
+Open `index.html` in a browser, or serve the folder:
 
-**University of California, Davis**  
-*Major: Computer Science*  
-*Expected Graduation: 2025*
+```bash
+python3 -m http.server 8080
+```
 
-- Relevant Coursework: Data Structures, Algorithms, Computer Architecture, AI, etc.
+Then visit `http://localhost:8080`.
 
-## Projects
+## Deploy
 
-    Check my resume.
-
-
-
-## Experience
-
-    Check my resume.
+Push to `main`. GitHub Pages publishes a trimmed `_site` (pages, styles, scripts, compressed images, one resume PDF). Large paper archives and older resume files stay in git but are not uploaded.
