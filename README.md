@@ -2,7 +2,7 @@
 
 Personal site: [ctrterry.github.io/portfolio](https://ctrterry.github.io/portfolio/)
 
-MCS Computer Science at UC Irvine. Previously B.S. Computer Science at UC Davis.
+M.S. in Computer Science, UC Davis. B.S. Computer Science, UC Davis.
 
 ## Pages
 
