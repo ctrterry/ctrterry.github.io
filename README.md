@@ -1,6 +1,6 @@
 # Tianren Chen — Portfolio
 
-Personal site: [ctrterry.github.io/portfolio](https://ctrterry.github.io/portfolio/)
+Personal site: [ctrterry.github.io](https://ctrterry.github.io/)
 
 M.S. in Computer Science, UC Davis. B.S. Computer Science, UC Davis.
 
