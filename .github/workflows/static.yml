@@ -38,7 +38,7 @@ jobs:
 
           cp assets/research/IMDB_Research_paper.pdf assets/research/RNN.pdf _site/assets/research/
 
-          cp "resumes/Tianren_Chen_Resume.pdf" _site/resumes/
+          cp "resumes/Tianren_Chen_Resume.pdf" "resumes/Tianren_Resume_ML.pdf" _site/resumes/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
