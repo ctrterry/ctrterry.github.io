@@ -35,11 +35,17 @@
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav-right");
 
-  const setMenuOpen = (open) => {
+  const setMenuOpen = (open, restoreFocus = false) => {
     if (!toggle || !nav) return;
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     nav.classList.toggle("is-open", open);
+
+    if (open) {
+      requestAnimationFrame(() => nav.querySelector("a")?.focus());
+    } else if (restoreFocus) {
+      toggle.focus();
+    }
   };
 
   if (toggle && nav) {
@@ -47,18 +53,24 @@
     toggle.setAttribute("aria-controls", nav.id);
 
     toggle.addEventListener("click", () => {
-      setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
+      const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+      setMenuOpen(willOpen, !willOpen);
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => setMenuOpen(false));
+      link.addEventListener("click", () => setMenuOpen(false, link.target === "_blank"));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (toggle.getAttribute("aria-expanded") !== "true") return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      setMenuOpen(false, true);
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key !== "Escape") return;
       if (toggle.getAttribute("aria-expanded") !== "true") return;
-      setMenuOpen(false);
-      toggle.focus();
+      setMenuOpen(false, true);
     });
   }
 
@@ -69,6 +81,10 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
     return;
   }
+
+  if (!("IntersectionObserver" in window)) return;
+
+  root.classList.add("reveal-ready");
 
   const observer = new IntersectionObserver(
     (entries) => {

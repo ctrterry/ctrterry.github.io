@@ -1,19 +1,42 @@
 const projects = [
   {
+    id: "deep-learning-course-project",
+    group: "core",
+    title: "Neural Networks in PyTorch",
+    image: "assets/img/CNN_result.webp",
+    imageWidth: 1400,
+    imageHeight: 898,
+    altText: "Deep learning experiment overview",
+    tags: ["PyTorch", "CNN", "GCN"],
+    description: `
+      <p>Implemented and studied neural network architectures across vision, sequences, graphs, and generative modeling.</p>
+      <ul>
+        <li>Applied graph convolutional networks to node classification on Cora, Pubmed, and Citeseer.</li>
+        <li>Built course implementations spanning MLPs, CNNs, RNNs, GCNs, transformers, and GANs.</li>
+        <li>Connected each implementation to its underlying research paper and learning objective.</li>
+      </ul>
+    `,
+    evidence: "Source implementation with node-classification work on Cora, Pubmed, and Citeseer.",
+    githubLink: "https://github.com/ctrterry/GCN_Model",
+  },
+  {
     id: "distributed-fs",
     group: "core",
     title: "Multi-threaded Distributed File Service",
     image: "assets/img/os_system.webp",
+    imageWidth: 798,
+    imageHeight: 415,
     altText: "Distributed file service architecture",
     tags: ["C++", "Concurrency", "Distributed Systems", "REST"],
     description: `
-      <p>C++ file service for concurrent reads and writes across clients.</p>
+      <p>Designed a C++ file service for consistent file and directory operations across concurrent clients.</p>
       <ul>
-        <li>HTTP/REST handlers for GET, PUT, and DELETE on files and directories.</li>
-        <li>Thread pool with FIFO scheduling, mutexes, and condition variables.</li>
-        <li>Disk updates kept consistent with transactional begin / rollback / commit.</li>
+        <li>Exposed GET, PUT, and DELETE operations through HTTP/REST handlers.</li>
+        <li>Coordinated requests with a FIFO thread pool, mutexes, and condition variables.</li>
+        <li>Protected disk updates with transactional begin, rollback, and commit behavior.</li>
       </ul>
     `,
+    evidence: "Source implementation covering REST operations, synchronization, and transactional disk updates.",
     githubLink: "https://github.com/ctrterry/Multi-Thread-Concurrency-Control",
   },
   {
@@ -21,16 +44,19 @@ const projects = [
     group: "core",
     title: "L-Store Concurrent Database",
     image: "assets/img/database.webp",
+    imageWidth: 1400,
+    imageHeight: 843,
     altText: "L-Store database architecture",
     tags: ["Databases", "Concurrency", "C++"],
     description: `
-      <p>In-memory L-Store with base/tail pages and SQL-like operations.</p>
+      <p>Built an in-memory L-Store database for concurrent transactional and analytical workloads.</p>
       <ul>
-        <li>INSERT, SELECT, UPDATE, and DELETE on a page-oriented layout.</li>
-        <li>Thread pool so transactional (OLTP) and analytical (OLAP) queries can overlap.</li>
-        <li>Metadata ranges for concurrent access to base and tail pages.</li>
+        <li>Implemented INSERT, SELECT, UPDATE, and DELETE on a base-and-tail page layout.</li>
+        <li>Used a synchronized thread pool so OLTP and OLAP queries could overlap safely.</li>
+        <li>Organized page metadata and ranges for concurrent access and updates.</li>
       </ul>
     `,
+    evidence: "Source implementation of the page layout, CRUD operations, and concurrent query execution.",
     githubLink: "https://github.com/ctrterry/Durable-LStore-Database",
   },
   {
@@ -41,11 +67,11 @@ const projects = [
     altText: "",
     tags: ["Node.js", "Express", "SQLite", "OAuth"],
     description: `
-      <p>Full-stack app for posts and profiles, with login and persistent storage.</p>
+      <p>Built a full-stack publishing application with authenticated users and persistent content.</p>
       <ul>
-        <li>Node.js, Express, SQLite, and Handlebars.</li>
-        <li>Google OAuth 2.0 via Passport.js for login and sessions.</li>
-        <li>CRUD APIs and third-party fetches rendered in the UI.</li>
+        <li>Implemented the server and UI with Node.js, Express, SQLite, and Handlebars.</li>
+        <li>Integrated Google OAuth 2.0 through Passport.js for login and sessions.</li>
+        <li>Exposed CRUD APIs for posts and profiles and rendered third-party data in the UI.</li>
       </ul>
     `,
     githubLink: "https://github.com/ctrterry/get-and-post",
@@ -89,6 +115,8 @@ const projects = [
     group: "more",
     title: "CPU and Cache Design",
     image: "assets/img/Cache.webp",
+    imageWidth: 1306,
+    imageHeight: 1050,
     altText: "CPU and cache architecture diagram",
     tags: ["Computer Architecture", "Digital Design"],
     description: `
@@ -101,30 +129,12 @@ const projects = [
     githubLink: "https://github.com/ctrterry/Computer-Architecture",
   },
   {
-    id: "deep-learning-course-project",
-    group: "more",
-    title: "Neural Nets in PyTorch",
-    image: "assets/img/CNN_result.webp",
-    altText: "Deep learning experiment overview",
-    tags: ["PyTorch", "CNN", "GCN"],
-    description: `
-      <p>Course implementations across MLP, CNN, RNN, GCN, transformers, and GANs.</p>
-      <ul>
-        <li>Node classification on Cora, Pubmed, and Citeseer with GCNs.</li>
-        <li>Related papers:
-          <a href="https://arxiv.org/abs/1609.02907" target="_blank" rel="noopener">GCN</a>,
-          <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Transformer</a>,
-          <a href="https://arxiv.org/abs/1406.2661" target="_blank" rel="noopener">GAN</a>.
-        </li>
-      </ul>
-    `,
-    githubLink: "https://github.com/ctrterry/GCN_Model",
-  },
-  {
     id: "machine-learning-course",
     group: "more",
     title: "Classic ML Models in Python",
     image: "assets/img/ml-course.webp",
+    imageWidth: 1400,
+    imageHeight: 784,
     altText: "Machine learning concepts",
     tags: ["Python", "scikit-learn"],
     description: `
@@ -137,6 +147,8 @@ const projects = [
     group: "more",
     title: "IMDB Dataset Analysis",
     image: "assets/img/research-paper.webp",
+    imageWidth: 1400,
+    imageHeight: 918,
     altText: "IMDB analysis paper cover",
     tags: ["Data Analysis", "Python"],
     description: `
@@ -150,6 +162,8 @@ const projects = [
     group: "more",
     title: "Uninformed Search Puzzles",
     image: "assets/img/AI_img.webp",
+    imageWidth: 1400,
+    imageHeight: 726,
     altText: "Search algorithms illustration",
     tags: ["Python", "BFS", "DFS"],
     description: `
@@ -167,21 +181,25 @@ function renderProject(project) {
   const linkText = project.isResearch ? "View write-up" : "View source";
   const linkClass = project.isResearch ? "project-link research-link" : "project-link";
   const image = project.image
-    ? `<img src="${project.image}" alt="${project.altText || ""}" loading="lazy">`
+    ? `<img src="${project.image}" alt="${project.altText || ""}" width="${project.imageWidth}" height="${project.imageHeight}" loading="lazy" decoding="async">`
     : "";
   const link = project.githubLink
-    ? `<a href="${project.githubLink}" target="_blank" rel="noopener" class="${linkClass}">${linkText}</a>`
+    ? `<a href="${project.githubLink}" target="_blank" rel="noopener" class="${linkClass}" aria-label="${linkText} for ${project.title}, opens in a new tab">${linkText}</a>`
+    : "";
+  const evidence = project.evidence
+    ? `<p class="project-evidence"><strong>Evidence:</strong> ${project.evidence}</p>`
     : "";
 
   return `
-    <article class="project-card" id="${project.id}">
+    <article class="project-card${project.image ? "" : " project-card--text"}" id="${project.id}">
       ${image}
       <div class="project-details">
-        <h2>${project.title}</h2>
+        <h3>${project.title}</h3>
         <div class="project-tags">
           ${createTagsHTML(project.tags)}
         </div>
         <div>${project.description}</div>
+        ${evidence}
         ${link}
       </div>
     </article>
@@ -215,7 +233,7 @@ function renderProjects() {
   const more = projects.filter((project) => project.group !== "core");
 
   projectsContainer.innerHTML =
-    renderGroup("Software I want evaluated", core) +
+    renderGroup("Selected projects", core) +
     renderGroup("Other coursework", more);
 
   requestAnimationFrame(scrollToHash);

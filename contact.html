@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Contact Tianren Chen — Software Engineer. M.S. in Computer Science, UC Davis." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action https://formspree.io; object-src 'none'; base-uri 'self'" />
+  <meta name="description" content="Contact Tianren Chen about machine learning and software engineering opportunities." />
   <meta name="keywords" content="Contact Tianren Chen, UC Davis, Software Engineering, AI" />
   <meta name="author" content="Tianren Chen" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:title" content="Contact — Tianren Chen" />
-  <meta property="og:description" content="Get in touch about software engineering, systems, and full-stack work." />
+  <meta property="og:description" content="Get in touch about machine learning and software engineering opportunities." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ctrterry.github.io/contact.html" />
   <meta property="og:image" content="https://ctrterry.github.io/assets/img/og.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact — Tianren Chen" />
-  <meta name="twitter:description" content="Get in touch about software engineering, systems, and full-stack work." />
+  <meta name="twitter:description" content="Get in touch about machine learning and software engineering opportunities." />
   <meta name="twitter:image" content="https://ctrterry.github.io/assets/img/og.jpg" />
 
   <title>Contact — Tianren Chen</title>
@@ -45,16 +46,13 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <div class="wrapper">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
       <a href="/" class="logo">T.Chen</a>
       <div class="nav-right" id="primary-nav">
         <a href="/">Home</a>
         <a href="projects.html">Projects</a>
-        <a href="resumes/Tianren_Resume_ML.pdf" target="_blank" rel="noopener">CV</a>
-        <a href="resume.html">Resume</a>
-        <a href="https://github.com/ctrterry" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="resumes/Tianren_Resume_ML.pdf" target="_blank" rel="noopener" aria-label="CV PDF, opens in a new tab">CV</a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
       </div>
       <div class="nav-controls">
         <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
@@ -75,7 +73,7 @@
     <header class="page-hero">
       <p class="eyebrow">Contact</p>
       <h1>Keep in touch</h1>
-      <p>Open to discussing software engineering work — systems, backends, and full-stack products.</p>
+      <p>Open to machine learning and software engineering opportunities, especially work grounded in reliable systems.</p>
     </header>
 
     <section class="section" id="main">
@@ -89,11 +87,11 @@
             </li>
             <li>
               <span>LinkedIn</span>
-              <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener">linkedin.com/in/ctrterry</a>
+              <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener" aria-label="LinkedIn profile, opens in a new tab">linkedin.com/in/ctrterry</a>
             </li>
             <li>
               <span>GitHub</span>
-              <a href="https://github.com/ctrterry" target="_blank" rel="noopener">github.com/ctrterry</a>
+              <a href="https://github.com/ctrterry" target="_blank" rel="noopener" aria-label="GitHub profile, opens in a new tab">github.com/ctrterry</a>
             </li>
             <li>
               <span>Location</span>
@@ -104,22 +102,27 @@
 
         <div class="contact-panel">
           <h2>Send a message</h2>
+          <p class="form-note">Use this form for opportunities, collaborations, or questions about my work.</p>
           <form id="contactForm" action="https://formspree.io/f/xovwdwqn" method="POST">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="company-website">Leave this field empty</label>
+              <input type="text" id="company-website" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required />
+              <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" required />
+              <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required />
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
+              <input type="text" id="subject" name="subject" maxlength="150" required />
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="5" maxlength="5000" required></textarea>
             </div>
             <button type="submit" class="btn-primary submit-btn">Send Message</button>
           </form>
@@ -133,8 +136,8 @@
         <p>&copy; <span id="year"></span> Tianren Chen</p>
         <div class="footer-links">
           <a href="contact.html">Contact</a>
-          <a href="https://github.com/ctrterry" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/ctrterry" target="_blank" rel="noopener" aria-label="GitHub, opens in a new tab">GitHub</a>
+          <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener" aria-label="LinkedIn, opens in a new tab">LinkedIn</a>
         </div>
       </div>
     </footer>

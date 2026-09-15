@@ -1,5 +1,18 @@
 /* Contact page — extends styles/style.css */
 
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-note {
+  margin: -0.45rem 0 1.25rem;
+  color: var(--ink-muted);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;

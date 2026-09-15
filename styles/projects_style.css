@@ -30,6 +30,10 @@
   scroll-margin-top: calc(var(--nav-h) + 1rem);
 }
 
+.project-card--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .project-card img {
   width: 100%;
   height: 200px;
@@ -43,10 +47,20 @@
   min-width: 0;
 }
 
-.project-details h2 {
+.project-details h3 {
   font-size: clamp(1.15rem, 3.4vw, 1.35rem);
-  font-weight: 560;
+  font-weight: 600;
   margin-bottom: 0.7rem;
+}
+
+.project-evidence {
+  margin: 1rem 0 0.7rem;
+  max-width: 46rem;
+}
+
+.project-evidence strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .project-tags {

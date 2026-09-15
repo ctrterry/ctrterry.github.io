@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Tianren Chen — Software Engineer. M.S. in Computer Science, UC Davis. Building systems and full-stack software." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action https://formspree.io; object-src 'none'; base-uri 'self'" />
+  <meta name="description" content="Tianren Chen — Machine Learning and Software Engineer building reliable ML systems, backends, and data-driven software." />
   <meta name="keywords" content="Tianren Chen, Computer Science, UC Davis, Software Engineering, AI, Machine Learning, Portfolio" />
   <meta name="author" content="Tianren Chen" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="Tianren Chen — Software Engineer" />
-  <meta property="og:description" content="M.S. in Computer Science, UC Davis. Concurrent systems, databases, and full-stack software." />
+  <meta property="og:title" content="Tianren Chen — Machine Learning &amp; Software Engineer" />
+  <meta property="og:description" content="Building reliable ML systems, backends, and data-driven software." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ctrterry.github.io/" />
   <meta property="og:image" content="https://ctrterry.github.io/assets/img/og.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tianren Chen — Software Engineer" />
-  <meta name="twitter:description" content="M.S. in Computer Science, UC Davis. Concurrent systems, databases, and full-stack software." />
+  <meta name="twitter:title" content="Tianren Chen — Machine Learning &amp; Software Engineer" />
+  <meta name="twitter:description" content="Building reliable ML systems, backends, and data-driven software." />
   <meta name="twitter:image" content="https://ctrterry.github.io/assets/img/og.jpg" />
 
-  <title>Tianren Chen — Software Engineer</title>
+  <title>Tianren Chen — Machine Learning &amp; Software Engineer</title>
   <link rel="canonical" href="https://ctrterry.github.io/" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
@@ -30,7 +31,7 @@
       "name": "Tianren Chen",
       "url": "https://ctrterry.github.io/",
       "image": "https://ctrterry.github.io/assets/img/og.jpg",
-      "jobTitle": "Software Engineer",
+      "jobTitle": "Machine Learning and Software Engineer",
       "email": "mailto:ctrterry@gmail.com",
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "University of California, Davis" }
@@ -62,15 +63,12 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <div class="wrapper">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
       <a href="/" class="logo">T.Chen</a>
       <div class="nav-right" id="primary-nav">
-        <a href="/" class="active">Home</a>
+        <a href="/" class="active" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
-        <a href="resumes/Tianren_Resume_ML.pdf" target="_blank" rel="noopener">CV</a>
-        <a href="resume.html">Resume</a>
-        <a href="https://github.com/ctrterry" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="resumes/Tianren_Resume_ML.pdf" target="_blank" rel="noopener" aria-label="CV PDF, opens in a new tab">CV</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="nav-controls">
@@ -92,16 +90,16 @@
     <header class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-text reveal">
-        <p class="hero-role">Software Engineer</p>
+        <p class="hero-role">Machine Learning · Software Engineering</p>
         <h1>Tianren Chen</h1>
         <p class="hero-lead">
-          Artifical Intelligence / Machine Learning <br>
-          M.S. in Computer Science, UC Davis,<br> 
-          B.S.  in Computer Science, UC Davis.
+          I build reliable machine learning systems,<br>
+          backends, and data-driven software.<br>
+          M.S. Computer Science candidate at UC Davis.
         </p>
         <div class="hero-actions">
-          <a href="resumes/Tianren_Chen_Resume.pdf" download class="btn-primary">Download Resume</a>
-          <a href="projects.html" class="btn-ghost">View Projects</a>
+          <a href="projects.html" class="btn-primary">View Projects</a>
+          <a href="resumes/Tianren_Resume_ML.pdf" download class="btn-ghost" aria-label="Download CV PDF">Download CV</a>
         </div>
       </div>
       <div class="hero-visual reveal" data-delay="1">
@@ -116,15 +114,29 @@
         <div class="section-head reveal">
           <p class="eyebrow">Selected work</p>
           <h2>Projects that show how I build</h2>
-          <p class="section-sub">Concurrency, storage, and product software — the work I want to be hired for.</p>
+          <p class="section-sub">Machine learning backed by strong systems and software fundamentals.</p>
         </div>
 
         <div class="work-list">
-          <a href="projects.html#distributed-fs" class="work-item reveal">
+          <a href="projects.html#deep-learning-course-project" class="work-item reveal">
             <span class="work-index">01</span>
             <div class="work-copy">
+              <h3>Neural Networks in PyTorch</h3>
+              <p>Implemented neural network architectures and applied graph convolutional networks to node classification on benchmark datasets.</p>
+              <ul class="work-tags">
+                <li>PyTorch</li>
+                <li>Graph Neural Networks</li>
+                <li>Deep Learning</li>
+              </ul>
+            </div>
+            <span class="work-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="projects.html#distributed-fs" class="work-item reveal" data-delay="1">
+            <span class="work-index">02</span>
+            <div class="work-copy">
               <h3>Multi-threaded Distributed File Service</h3>
-              <p>C++ file service with HTTP/REST handlers, a thread pool, and disk transactions for concurrent reads and writes.</p>
+              <p>Designed a C++ file service with concurrent HTTP operations and transactional disk updates for consistent shared-state access.</p>
               <ul class="work-tags">
                 <li>C++</li>
                 <li>Concurrency</li>
@@ -134,29 +146,15 @@
             <span class="work-arrow" aria-hidden="true">→</span>
           </a>
 
-          <a href="projects.html#lstore-db" class="work-item reveal" data-delay="1">
-            <span class="work-index">02</span>
+          <a href="projects.html#lstore-db" class="work-item reveal" data-delay="2">
+            <span class="work-index">03</span>
             <div class="work-copy">
               <h3>L-Store Concurrent Database</h3>
-              <p>In-memory store with base/tail pages, SQL-like CRUD, and a thread pool for mixed OLTP and OLAP traffic.</p>
+              <p>Built an in-memory database with base and tail pages, SQL-like operations, and synchronized OLTP and OLAP workloads.</p>
               <ul class="work-tags">
                 <li>Databases</li>
                 <li>Concurrency</li>
                 <li>C++</li>
-              </ul>
-            </div>
-            <span class="work-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a href="projects.html#web-oauth-blog" class="work-item reveal" data-delay="2">
-            <span class="work-index">03</span>
-            <div class="work-copy">
-              <h3>Blogging Platform with Google OAuth</h3>
-              <p>Node.js app with Passport.js login, Express APIs, SQLite storage, and CRUD for posts and profiles.</p>
-              <ul class="work-tags">
-                <li>Node.js</li>
-                <li>OAuth</li>
-                <li>SQLite</li>
               </ul>
             </div>
             <span class="work-arrow" aria-hidden="true">→</span>
@@ -173,17 +171,17 @@
       <div class="section-inner about-grid">
         <div class="section-head reveal">
           <p class="eyebrow">About</p>
-          <h2>Systems first, then intelligence</h2>
+          <h2>Machine learning, built on strong systems</h2>
         </div>
         <div class="about-copy reveal" data-delay="1">
           <p>
             I’m an M.S. in Computer Science student at UC Davis, where I also earned my B.S. in Computer Science.
-            The work I show here is mostly systems: concurrent file services, in-memory databases,
-            and networked programs that have to stay correct under load.
+            I focus on machine learning engineering, supported by a strong foundation in software and systems:
+            concurrent services, in-memory databases, and programs that have to remain correct under load.
           </p>
           <p>
-            I also ship product-shaped software: authenticated web apps with real APIs and
-            persistent data. I care about code that other people can run, not just slides.
+            I build from implementation through evaluation, including PyTorch models and authenticated
+            web applications with real APIs and persistent data. I care about work that others can run and verify.
           </p>
         </div>
       </div>
@@ -193,31 +191,36 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <p class="eyebrow">Reading</p>
-          <h2>Papers I keep coming back to</h2>
-          <p class="section-sub">Foundations in language and vision — linked to arXiv, not a dump of PDFs.</p>
+          <h2>Selected reading</h2>
+          <p class="section-sub">A short selection of work that informs how I think about modern machine learning.</p>
         </div>
 
         <ul class="reading-list reveal">
-          <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a></li>
-          <li><a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener">GPT-3</a></li>
-          <li><a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener">InstructGPT</a></li>
-          <li><a href="https://arxiv.org/abs/2401.10020" target="_blank" rel="noopener">Self-Rewarding LMs</a></li>
-          <li><a href="https://arxiv.org/abs/2010.11929" target="_blank" rel="noopener">ViT</a></li>
-          <li><a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener">CLIP</a></li>
-          <li><a href="https://arxiv.org/abs/2304.02643" target="_blank" rel="noopener">SAM</a></li>
-          <li><a href="https://arxiv.org/abs/2006.11239" target="_blank" rel="noopener">DDPM</a></li>
-          <li><a href="https://arxiv.org/abs/2112.10752" target="_blank" rel="noopener">Latent Diffusion</a></li>
+          <li><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener" aria-label="Attention Is All You Need, opens in a new tab">Attention Is All You Need</a></li>
+          <li><a href="https://arxiv.org/abs/1609.02907" target="_blank" rel="noopener" aria-label="Graph Convolutional Networks, opens in a new tab">Graph Convolutional Networks</a></li>
+          <li><a href="https://arxiv.org/abs/2112.10752" target="_blank" rel="noopener" aria-label="Latent Diffusion, opens in a new tab">Latent Diffusion</a></li>
         </ul>
 
         <div class="discussion reveal">
           <h3>Reading group</h3>
           <p>Trackers by year, if you want the longer list.</p>
           <ul class="discussion-links">
-            <li><a href="https://docs.google.com/spreadsheets/d/1cKKFg2zjILwHBISuJCIMwDJIK0FUtJIftuGG9lLRDSo/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener">2025</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/1YyNrls0FG1jVtHapDFglOy35CCJlYeoDeOvzx7QsefA/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener">2024</a></li>
-            <li><a href="https://docs.google.com/spreadsheets/d/1nPFJScmS9t6R2qLEgY5SeBMo0PCMHR1CASnGC47hFE8/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener">2023</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1cKKFg2zjILwHBISuJCIMwDJIK0FUtJIftuGG9lLRDSo/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener" aria-label="2025 reading tracker, opens in a new tab">2025</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1YyNrls0FG1jVtHapDFglOy35CCJlYeoDeOvzx7QsefA/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener" aria-label="2024 reading tracker, opens in a new tab">2024</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1nPFJScmS9t6R2qLEgY5SeBMo0PCMHR1CASnGC47hFE8/edit?gid=2049144862#gid=2049144862" target="_blank" rel="noopener" aria-label="2023 reading tracker, opens in a new tab">2023</a></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="section contact-cta-section">
+      <div class="section-inner contact-cta reveal">
+        <div>
+          <p class="eyebrow">Let’s connect</p>
+          <h2>Interested in working together?</h2>
+          <p>I’m open to machine learning and software engineering opportunities.</p>
+        </div>
+        <a href="contact.html" class="btn-primary">Contact me</a>
       </div>
     </section>
 
@@ -226,8 +229,8 @@
         <p>&copy; <span id="year"></span> Tianren Chen</p>
         <div class="footer-links">
           <a href="contact.html">Contact</a>
-          <a href="https://github.com/ctrterry" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/ctrterry" target="_blank" rel="noopener" aria-label="GitHub, opens in a new tab">GitHub</a>
+          <a href="https://www.linkedin.com/in/ctrterry" target="_blank" rel="noopener" aria-label="LinkedIn, opens in a new tab">LinkedIn</a>
         </div>
       </div>
     </footer>
